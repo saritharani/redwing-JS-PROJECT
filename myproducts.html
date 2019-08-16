@@ -1,0 +1,103 @@
+<html>
+    <head>    
+        <title>Products_page</title>
+        <link rel="shortcut icon" type="image/png" href="https://rukminim1.flixcart.com/image/800/960/jm6mjrk0/shoe/q/w/k/5g-546-9-campus-red-original-imaf95gkpbgzedhb.jpeg?q=50">
+    
+        <style>
+
+body {
+  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  background-color:white;
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ZVpgni6WfyHqPxNKIXRhuioi-R49iqw7qvSODQZ5DYl7X6fOuw");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+.BodyPart {  
+  position: absolute;
+  background-color:transparent;
+  padding: 5px 20px 15px 20px;
+  border-radius: 3px;
+  width:100%;
+}
+a{
+  font-size: 17px;
+  border: 2px solid rgb(4, 158, 4);
+  border-radius: 3px;
+  padding: 5px;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  background-color: rgb(184, 243, 187);
+}
+.btn1{
+  margin-left: 30px;
+}
+.btn2{
+  margin-left: 940px;
+}
+.btn3{
+  margin-left: 30px;
+}  
+td{
+  padding: 30px;
+}
+
+</style>
+</head>
+
+<body>
+
+            <br>
+            <a class="btn1" href="myhome.html"><b>HOME</b></a>
+            <a class="btn2" href="myproducts.html"><b>PRODUCTS</b> </a> 
+            <a class="btn3" href="mylogin.html" ><b>MyAccount</b></a> 
+
+     <center><select id="product">
+                                <option value="shoe">Men Shoe</option>
+                                <option value="sandles">Men sandles</option>
+                                <option value="ladies">Women</option>
+                                <option value="kids">Kids</option>
+                </select>
+        <button onclick="showInfo()">Select</button></center>
+
+        <center><table>
+                        <tr>
+                            <td><img id="product1" ></td> 
+                            <td><img id="product2" ></td> 
+                            <td><img id="product3" ></td> 
+                            <td><img id="product4" ></td> 
+                        </tr>
+        </table></center>
+
+<script>
+    function showInfo(){
+        var product=document.getElementById("product").value;
+        switch(product){
+            case "shoe":
+                document.getElementById("product1").src="https://images-eu.ssl-images-amazon.com/images/I/41Wwa-Og7pL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product2").src="https://images-eu.ssl-images-amazon.com/images/I/51YwaHgbvhL._AC_UL260_SR200,260_FMwebp_QL70_.jpg";
+                document.getElementById("product3").src="https://images-eu.ssl-images-amazon.com/images/I/41QMm+BuiGL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product4").src="https://images-eu.ssl-images-amazon.com/images/I/41oL+z1xhzL._AC_UL260_SR200,260_.jpg";  break;
+            case "sandles":
+                document.getElementById("product1").src="https://images-eu.ssl-images-amazon.com/images/I/41gtxZbPbTL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product2").src="https://images-eu.ssl-images-amazon.com/images/I/51WKtI6IxxL._AC_UL260_SR200,260_.jpg";
+                document.getElementById("product3").src="https://images-eu.ssl-images-amazon.com/images/I/413JFrIlQ6L._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product4").src="https://images-eu.ssl-images-amazon.com/images/I/41GeRuTrJeL._AC_UL260_SR200,260_.jpg";  break;
+            case "ladies":
+                document.getElementById("product1").src="https://images-eu.ssl-images-amazon.com/images/I/41G3KgO9QXL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product2").src="https://images-eu.ssl-images-amazon.com/images/I/41fbfmndeLL._AC_UL260_SR200,260_.jpg";
+                document.getElementById("product3").src="https://images-eu.ssl-images-amazon.com/images/I/41x62lW0JdL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product4").src="https://images-eu.ssl-images-amazon.com/images/I/41gdO4A0YwL._AC_UL260_SR200,260_.jpg";  break;
+            case "kids":
+                document.getElementById("product1").src="https://images-eu.ssl-images-amazon.com/images/I/31Wc0C-baZL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product2").src="https://images-eu.ssl-images-amazon.com/images/I/31QCD1+N3ML._AC_UL260_SR200,260_.jpg";
+                document.getElementById("product3").src="https://images-eu.ssl-images-amazon.com/images/I/41FIydXhCzL._AC_UL260_SR200,260_.jpg"; 
+                document.getElementById("product4").src="https://images-eu.ssl-images-amazon.com/images/I/41ba-QPH3ZL._AC_UL260_SR200,260_.jpg";  break;
+
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<html>
+
+    <head>
+        <title>Cart_page</title>
+        <link rel="shortcut icon" type="image/png" href="https://rukminim1.flixcart.com/image/800/960/jm6mjrk0/shoe/q/w/k/5g-546-9-campus-red-original-imaf95gkpbgzedhb.jpeg?q=50">
+        
+        <style>
+        body{            
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size:  100%;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ZVpgni6WfyHqPxNKIXRhuioi-R49iqw7qvSODQZ5DYl7X6fOuw');
+        }        
+        a{
+            text-decoration: none;
+            border: 2px solid green;
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 17px;
+        }
+        a:hover{
+            text-decoration:none;
+            background-color: rgb(154, 214, 154);
+        }
+        td,th{
+            font-size: 20px;
+            padding: 13px;
+            text-align: center;                    
+        }
+        td{
+            border-bottom: 1px solid black;
+        }
+        th{
+            background-color: rgba(244, 249, 250, 0.849);
+            border: 1px solid black;
+        }
+        tr{
+            background-color:transparent;
+            border: 1px solid black;
+            color: black;
+            border-bottom: 1px solid rgb(20, 20, 22);
+        }
+        img{
+            width:60px;
+            height: 60px;
+        }
+        .checkoutbtn{
+            position: absolute;
+            color: white;
+            background-color: rgb(45, 114, 24);
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;  
+            border-style:inherit;  
+            top:82%;
+            left:55%;        
+        }        
+        .continuebtn{
+            position: absolute;
+            color:black;
+            background-color:rgb(99, 206, 117);
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;  
+            border-style:inherit;  
+            top:82%;
+            left:38%;    
+            border-radius: 8px;    
+        }        
+        .remove{
+            background-color: rgb(221, 56, 56);
+            color: rgb(236, 232, 231);
+            border-style:inherit; 
+            box-shadow: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .LogoPart{
+            position: absolute;
+            top:10%;
+            width: 20%;
+            height: 28%;
+            margin-left: 2%;
+            /* margin-top: 3%;  */
+        }
+        .TopRightPart{
+            position: absolute;
+            top:5%;
+            left:1080px;
+            font-size: 20px;
+        }
+        .MainPart #table1{
+            position: absolute;
+            border: 1px solid black;
+            width: 65%;  
+            border-collapse: collapse;   
+            left:20%; 
+            top:28%; 
+        }     
+        .cart_Txt{
+            position:absolute;
+            color: rgb(19, 3, 3);
+            left:35%;
+            width:30%;
+            font-size: 30px;
+            background-color: rgb(225, 240, 96);    
+            text-align: center;    
+            border-radius: 5px;              
+        }
+        .quantityInput{
+            text-align: center;
+        }
+        </style>
+    </head> 
+
+    <body>
+            <div class="MainPart">    
+            <div class="TopRightPart">
+                <a href="myhome.html"><b>HOME</b>  </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="mylogin.html"><b>Log out</b>  </a> 
+            </div>        
+            <img class="LogoPart" src="http://www.redwingshoes.com/assets/content/redwingshoes/icons/red-wing-shoes-logo-about.png">
+            
+            <br>
+            
+            <h3 class="cart_Txt">Your items in Cart</h3>
+            <div class="TablePart">
+                
+                <table id="table1">
+                <tr style="color:blue">
+                    <th>S.No</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total Price</th>
+                    <th>remove</th>
+                </tr>
+                <tr id="row1">
+                    <td>1.</td>
+                    <td><img src="https://images-eu.ssl-images-amazon.com/images/I/41Wwa-Og7pL._AC_UL260_SR200,260_.jpg"></td>
+                    <td><input type="number" value="1" min="1" max="99" onkeydown="return first()" class="quantityInput"></td>
+                    <td>Rs.1000/-</td>
+                    <td id="totalP1">Rs.1000/-</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfh3HNo5vn7bosGjb0ReAiih9qB_SLGP1yp1fCF-EjQG4PcDzZeA" 
+                            onclick="removeItem(1)" class="remove" > </td>
+                </tr>
+                <tr id="row2">
+                    <td>2.</td>
+                    <td><img src="https://images-eu.ssl-images-amazon.com/images/I/41gtxZbPbTL._AC_UL260_SR200,260_.jpg"></td>
+                    <td><input type="number" value="1" min="1" max="99" class="quantityInput"></td>
+                    <td>Rs.1400/-</td>
+                    <td>Rs.1400/-</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfh3HNo5vn7bosGjb0ReAiih9qB_SLGP1yp1fCF-EjQG4PcDzZeA" 
+                        onclick="removeItem(2)" class="remove" > </td>
+                </tr>
+                <tr id="row3">
+                    <td>3.</td>
+                    <td><img src="https://images-eu.ssl-images-amazon.com/images/I/41G3KgO9QXL._AC_UL260_SR200,260_.jpg"></td>
+                    <td><input type="number" value="1" min="1" max="99" class="quantityInput"></td>
+                    <td>Rs.1950/-</td>
+                    <td>Rs.1950/-</td>
+                    <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfh3HNo5vn7bosGjb0ReAiih9qB_SLGP1yp1fCF-EjQG4PcDzZeA" 
+                        onclick="removeItem(3)" class="remove" ></td>
+                </tr>
+                
+            </table><br><br>
+            <button class="continuebtn" onclick="continuefun()" >Continue Shopping</button>
+            <button class="checkoutbtn" onclick="check_out()">Place an order</button></div>
+
+            <script>
+                    function removeItem(no){
+                        document.getElementById("row"+no).outerHTML="";
+                    }
+  
+                    function check_out(){
+                        window.location = "myaddress.html";
+                    }
+                    function continuefun(){
+                        window.location = "myproducts.html";
+                    }
+                    function first(){
+                        var amount=document.getElementById("totalP1").value; 
+                         var amount=amount+1000 ;
+                         console.log(amount);
+                        document.getElementById("totalP1").innerHTML= amount;
+                    }                   
+            </script>
+        </div>
+    </body>
+
+</html>
+
+
+

@@ -1,0 +1,276 @@
+<html>
+
+<title>Home_Page</title>
+
+<head> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <link rel="shortcut icon" type="image/png" href="https://rukminim1.flixcart.com/image/800/960/jm6mjrk0/shoe/q/w/k/5g-546-9-campus-red-original-imaf95gkpbgzedhb.jpeg?q=50">
+        <style>
+                body {
+                  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+                  background-color:white;
+                  background-image:url("https://cdn.pixabay.com/photo/2017/06/07/20/33/shoes-2381534_960_720.jpg");
+                  background-repeat: no-repeat;
+                  background-size: 100%;
+                  background-attachment: fixed;
+                }
+                                
+                * {
+                  box-sizing: border-box;
+                }
+                
+                /* Full-width input fields */
+                input[type=text], input[type=password] {
+                  width: 100%;
+                  padding: 10px;
+                  margin: 5px 0 22px 0;
+                  display: inline-block;
+                  border: none;
+                  background:rgb(152, 192, 231);
+                }
+                
+                input[type=text]:focus, input[type=password]:focus {
+                  background-color:rgb(152, 192, 231);
+                  color: black;
+                  outline: none;
+                }
+                
+                /* Overwrite default styles of hr */
+                hr {
+                  border: 1px solid rgb(152, 192, 231);
+                  margin-bottom: 10px;
+                }                
+                
+                .registerbtn {
+                  background-color: #4CAF50;
+                  color: white;
+                  padding: 16px 20px;
+                  margin: 8px 0;
+                  border: none;
+                  cursor: pointer;
+                  width: 100%;
+                  opacity: 0.9;
+                  
+                }
+                
+                .registerbtn:hover {
+                  opacity: 1;
+                }                                
+                a {
+                  color: white;         
+                }
+                .container a:link {
+                    text-decoration: none;
+                }
+                /* .container a:visited {
+                    text-decoration: underline;
+                } */
+                .container a:hover {
+                    text-decoration: underline;
+                }
+                a:active {
+                    text-decoration: underline;
+                }                                
+                .signin {
+                  background-color:rgb(152, 192, 231);
+                  text-align: center;
+                  /* color: rgb(255, 255, 255); */
+                  color:white;
+                }
+                .container .image1{
+                  position: absolute;
+                  top: 15%;
+                  left:4%;
+                      }
+                      
+                .form1{
+                  padding: 8px;
+                  width:30%; 
+                  margin-left: 70%;
+                  margin-right: 0%;
+                  margin-top: 0%;
+                  margin-bottom: 2%;
+                  }
+                  .button1{
+                      color:white;
+                      background: #4CAF50;
+                      font-size: 20px;                    
+                  }
+                  h2{
+                      font-family: "Comic Sans MS", cursive, sans-serif;
+                  }
+                  .container{
+                      padding: 8px;
+                      background-color:  rgb(132, 132, 231);
+                      border: solid 1px black;
+                  }
+                  span{
+                      font-size: 14px;
+                  }
+                  .container .nav_right{
+                      position: absolute;
+                      left: 72%;
+                      top:2.5%;
+                  }
+                    
+        </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <img height="28%" width="20%" class="image1" 
+    src="http://www.redwingshoes.com/assets/content/redwingshoes/icons/red-wing-shoes-logo-about.png" alt="ShoeMart">
+    <!-- <button class="btn"><b>SHOP NOW</b></button> -->
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="myhome.html"><b>HOME</b>  </a> 
+    
+    <div class="nav_right">
+    <a href="myproducts.html"><b>PRODUCTS</b> </a> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="" ><b>MyAccount</b></a> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <a href="mycart.html"><b>MY CART</b></a>
+  </div>
+  </div>
+    
+<br><br><br>
+
+<form class="form1" action="/action_page.php" style="border:2px solid rgb(86, 77, 209)" >
+
+  <div class="containers" >
+    <h2>Register Here</h2>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="username"><b>Username</b></label>
+    <input type="text" id="username" placeholder="username">
+    <span id="username_msg" style="color:red"></span><br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" id="email" placeholder="email">
+    <span id="email_msg" style="color:red"></span><br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" placeholder="password">
+    <span id="password_msg" style="color:red"></span><br>
+
+    <label for="psw-repeat"><b>Confirm Password</b></label>
+    <input type="password" placeholder="Confirm Password" name="psw-repeat" id="confirmpassword" required>
+    <span id="confirmpassword_msg" style="color:red"></span><br>
+
+    <center> <button class="button1" onclick="signupValidation()">Register</button></center>
+  </div>
+            
+    <div class="signin">
+      <p>Already have an account? <a class="sin" href="mylogin.html">Log in</a>.</p>
+    </div>
+
+</form>
+
+<script>
+
+function signupValidation(){
+
+event.preventDefault();
+document.getElementById("username_msg").innerHTML = "";
+document.getElementById("email_msg").innerHTML = "";
+document.getElementById("password_msg").innerHTML = "";
+document.getElementById("confirmpassword_msg").innerHTML = "";
+var username=document.getElementById("username").value;
+var email=document.getElementById("email").value;
+var password=document.getElementById("password").value;
+var confirmpassword=document.getElementById("confirmpassword").value;
+
+var data={
+    username:username,
+    email:email,
+    password:password,
+    confirmpassword:confirmpassword
+}
+
+
+var datachck=localStorage.getItem(email);
+if(datachck === null)
+{
+    if((data.username.length>0 && data.username !==undefined) 
+        && (data.email.length>0 && data.email !==undefined)
+        && (data.password.length>0 && data.password !==undefined)
+        && (data.confirmpassword.length>0 && data.confirmpassword !==undefined))
+    {
+        if(data.username.length>=4)
+        {
+            if(/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/.test(data.email))
+            {
+              if(/^(?=.*[\d])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*])[\w!@#$%^&*]{8,}$/.test(data.password) && 
+                    data.password === data.confirmpassword)
+                
+                  {
+                      var userdata=JSON.stringify(data);
+                      localStorage.setItem(email,userdata);
+
+                    //   Email.send({
+                    //     Host : "smtp25.elasticemail.com",
+                    //     Username : "siddharthraz003@gmail.com",
+                    //     Password : "e53d22c1-b623-471e-9bd4-9310d67861c1",
+                    //     To : email,
+                    //     From : "siddharthraz003@gmail.com",
+                    //     Subject : "This is Red Wings",
+                    //     Body : "This is my webiste body. Welcome to my world"
+                    // }).then(
+                    //      message => alert(message)
+                    //         );
+                  
+                      window.location="mylogin.html";
+                                         
+                  } 
+                  else
+                  {
+                    //alert("password doesnt match");
+                    document.getElementById("password_msg").innerHTML = "Password doesn't match/password doesn't meet given criteria ";
+                    return false;
+                }
+              
+            }
+            else
+            {
+                 document.getElementById("email_msg").innerHTML = "Enter Valid EmailId";
+                return false;
+            }
+        }
+        else
+             {
+             document.getElementById("username_msg").innerHTML = "Username should be min 4 char";
+             return false;
+        }        
+        }
+   else
+   {
+      //alert("Please enter all fields");
+      document.getElementById("username_msg").innerHTML = "Enter Username";
+      document.getElementById("email_msg").innerHTML = "Enter mailId";
+      document.getElementById("password_msg").innerHTML = "Enter Password";
+      document.getElementById("confirmpassword_msg").innerHTML = "Enter Confirm Password";
+   }
+}
+else
+{
+    document.getElementById("email_msg").innerHTML = "User Already registered";
+}
+
+
+      
+}
+
+</script>
+<!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+</form>    
+</body>
+<br><br>
+</html>
+
+
+
+

@@ -1,0 +1,113 @@
+<html>
+
+<head>
+<style>
+body {
+  font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
+  background-color:white;
+  background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ZVpgni6WfyHqPxNKIXRhuioi-R49iqw7qvSODQZ5DYl7X6fOuw");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+}
+input[type=text] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.fset{
+  position: absolute;
+  width:50%;
+  border:none;
+  left:200px;
+  top:200px;
+  text-align: center;
+  font-size: 20px;
+  
+}
+.sbtn{
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  width: 40%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+a{
+  font-size: 17px;
+  border: 2px solid rgb(4, 158, 4);
+  border-radius: 3px;
+  padding: 5px;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+  background-color: rgb(184, 243, 187);
+}
+.btn1{
+  margin-left: 30px;
+}
+.btn2{
+  margin-left: 940px;
+}
+.btn3{
+  margin-left: 30px;
+}
+.headtext{
+    background-color: rgb(253, 173, 53);
+    border-radius: 3px;
+}
+</style>
+
+</head>
+
+<body>
+<br>
+        <a class="btn1" href="myhome.html"><b>HOME</b></a>
+        <a class="btn2" href="myproducts.html"><b>PRODUCTS</b> </a> 
+        <a class="btn3" href="mylogin.html" ><b>MyAccount</b></a>
+
+        
+
+        <fieldset id="paymenttype" class="fset">
+          
+            <h2 class="headtext"> Select Payment method </h2><br>
+
+            <input type="radio" name="payment" id="Card">Credit/Debit Card<br> 
+            <input type="radio" name="payment" id="COD">Cash On Delivery<br><br><br>
+            <input class="sbtn" type="submit" value="Submit" onclick="paymentsubmit()">
+            
+        </fieldset>        
+
+<script>
+function paymentsubmit(){
+  event.preventDefault();
+    var card=document.getElementById("Card");
+    var cod=document.getElementById("COD");
+        if(card.checked){
+              window.location="mycardpayment.html";
+        }
+        else if(cod.checked){
+          window.location="mysuccess.html";
+        }
+        else{
+          alert("Please select any of the payment method");
+        }
+    
+    
+
+// window.location="mysuccess.html";
+}
+
+</script>
+
+</body>
+
+</html>
+
